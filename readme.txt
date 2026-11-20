@@ -2,7 +2,7 @@
 Contributors: zohopayments
 Tags: zoho, zoho payments, payment gateway, gutenberg, checkout, quick pay
 Requires at least: 5.8
-Tested up to: 6.7
+Tested up to: 7.1.5
 Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv3 or later
