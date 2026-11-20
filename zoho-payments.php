@@ -1,15 +1,12 @@
 <?php
 /**
  * Plugin Name: Zoho Payments Quick Pay
- * Plugin URI:  https://wordpress.org/plugins/zoho-payments/
  * Description: Accept payments seamlessly on WordPress using Zoho Payments. Extends the native WordPress Button block with Quick Pay checkout, on-demand OAuth token management, and cryptographic webhook verification.
  * Version:     1.0.0
  * Author:      Zoho Payments
  * Author URI:  https://www.zoho.com/payments/
  * License:     GPL-3.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain: zoho-payments
- * Domain Path: /languages
  * Requires at least: 5.8
  * Requires PHP: 7.4
  */
@@ -113,7 +110,6 @@ final class Zoho_Payments {
      * Initialize core hooks.
      */
     private function init_hooks() {
-        add_action('plugins_loaded', array($this, 'on_plugins_loaded'));
         add_filter('plugin_action_links_' . ZOHO_PAYMENTS_PLUGIN_BASENAME, array($this, 'add_action_links'));
         add_action('init', array($this, 'register_rewrite_rules'));
     }
@@ -123,13 +119,6 @@ final class Zoho_Payments {
      */
     public function register_rewrite_rules() {
         add_rewrite_rule('^zoho-payments-callback/?$', 'index.php?zoho_payments_callback=1', 'top');
-    }
-
-    /**
-     * Plugins loaded hook.
-     */
-    public function on_plugins_loaded() {
-        load_plugin_textdomain('zoho-payments', false, dirname(ZOHO_PAYMENTS_PLUGIN_BASENAME) . '/languages');
     }
 
     /**
