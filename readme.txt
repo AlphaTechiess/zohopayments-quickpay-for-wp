@@ -4,7 +4,7 @@ Tags: zoho, zoho payments, payment gateway, gutenberg, checkout, quick pay
 Requires at least: 5.8
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.1
+Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -54,15 +54,11 @@ If you leave the Redirect URL blank in the block settings, the customer will sim
 
 == Changelog ==
 
-= 1.0.1 =
-* Multi-edition support for India and United States.
-* Webhook ingestion with event_object support.
-* Icon copy button with visual checkmark feedback.
-* Performance optimizations: in-memory caching and single-query atomic webhook inserts.
-
 = 1.0.0 =
-* Initial release.
-* Support for Zoho Payments with OAuth 2.0 on-demand token generation.
-* Drag-and-drop Gutenberg button block with site global color support.
-* Secure HMAC-SHA256 webhook signature verification.
-* Sandbox and Live mode support.
+* Initial production release.
+* Seamless native WordPress Button (`core/button`) block extension with 100% theme style inheritance.
+* Multi-edition support for India and United States Zoho accounts.
+* Zero-cron on-demand OAuth 2.0 token generation with intelligent caching.
+* Official Zoho Payments checkout widget integration with dual REST and AJAX fallback.
+* Cryptographic HMAC-SHA256 webhook signature verification and automated order logging.
+* Interactive copy tools with checkmark feedback.
